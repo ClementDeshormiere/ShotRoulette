@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkGreen"
+    tools:context=".Bet_Layout">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar_bet"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/ultraDarkGreen"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Make your bet !"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar_bet" />
+
+    <RadioGroup
+        android:id="@+id/wideRadioGroup"
+        android:layout_width="376dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/applyButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextBet">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Gain x2"
+            android:textColor="#2E9708"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/colorChoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose a color"
+            android:textSize="20sp" />
+
+
+        <RadioButton
+            android:id="@+id/blackButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="checkButton"
+            android:text="Black" />
+
+        <RadioButton
+            android:id="@+id/redButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="checkButton"
+            android:text="Red" />
+
+
+        <TextView
+            android:id="@+id/typeChoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose a type of number"
+            android:textSize="20sp" />
+
+
+        <RadioButton
+            android:id="@+id/pairButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="checkButton"
+            android:text="Even" />
+
+        <RadioButton
+            android:id="@+id/impairButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="checkButton"
+            android:text="Odd" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Gain x3"
+            android:textColor="#BA880A"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/sequenceChoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose a sequence"
+            android:textSize="20sp" />
+
+
+        <RadioButton
+            android:id="@+id/sequenceButton1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="checkButton"
+            android:text="1 to 12" />
+
+        <RadioButton
+            android:id="@+id/sequenceButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="13 to 24" />
+
+        <RadioButton
+            android:id="@+id/sequenceButton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="checkButton"
+            android:text="25 to 36" />
+
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Gain x5"
+            android:textColor="#DC0D0D"
+            android:textSize="25sp" />
+
+        <RadioButton
+            android:id="@+id/numberChoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="checkButton2"
+            android:text="Choose a number" />
+
+
+        <EditText
+            android:id="@+id/editTextNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:ems="10"
+            android:hint="Your favorite number between 0 and 36"
+            android:inputType="number" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/applyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Apply"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextBet"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+        android:hint="Your sips"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleText" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="How many sip you bet: "
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextBet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextBet" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
